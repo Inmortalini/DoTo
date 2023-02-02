@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+//Esto es como un React.createElement('div, {}....)
+import React from "react";
+import { TodoCounter } from "./TodoCounter";
+import { TodoSearch } from "./TodoSearch";
+import { TodoList } from "./TodoList";
+import { TodoItem } from "./TodoItem";
+import { CreateTodoButtom } from "./CreateTodoButton";
+const defaultTodos = [
+  { text: "Cortar Cebolla", completed: true },
+  { text: "Tomar el curso de react", completed: false },
+  { text: "Llorar con la llorona", completed: false },
+  { text: "Lalaland", completed: true },
+];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const completedTodos = todos.filter((todo) => todo.completed).length;
+  const totalTodos = todos.length;
+  const [searchValue, setsearchValue] = React.useState("");
+  let searchedTodos=[];
+  if (!searchValue.length >= 1) {
+    searchedTodos=todos
+  }else{
+    searchedTodos = todos.filter(todo => {
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return todoText.includes(searchText);
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <TodoCounter total={totalTodos} completed={completedTodos} />
+
+      <TodoSearch searchValue={searchValue} setsearchValue={setsearchValue} />
+      <TodoList>
+        {searchedTodos.map(todo=>(
+          <TodoItem 
+          key={todo.text} 
+          text={todo.text} 
+          completed={todo.completed} />
+        ))}
+      </TodoList>
+      <CreateTodoButtom />
+    </React.Fragment>
   );
 }
 

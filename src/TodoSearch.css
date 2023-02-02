@@ -1,0 +1,21 @@
+.TodoSearch {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 60px; 
+    border: 1px solid rgb(112, 112, 169);
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.795);
+    margin: 20px auto;
+    text-align: center;
+}
+  .labelSearch{
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+    align-items: center;
+    text-align: center;
+    color: #B4B7B7;    
+  }
+

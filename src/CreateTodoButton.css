@@ -1,0 +1,42 @@
+/* .CreateTodoButtom{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 60px; 
+    border: 1px solid darkblue;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+.CreateTodoButtom:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+} */
+.CreateTodoButtom {
+    background-color: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+  
+    transform: rotate(0);
+    transition: .3s ease;
+  }
+  
+  .CreateTodoButtom:hover {
+    transform: rotate(224deg);
+  }

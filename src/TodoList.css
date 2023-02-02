@@ -1,0 +1,15 @@
+.liList {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .spanList {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
