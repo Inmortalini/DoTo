@@ -72,4 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # DoTo
 Es un ToDo sencillo realizado con React
->>>>>>> bed6d747206698ebe27aac64e5c338cea0e55a6d
+
