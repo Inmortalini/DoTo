@@ -14,11 +14,11 @@ function TodoItem(props) {
         </span>
         <p
           className={`pItem ${props.completed ? "pTachada" : ""}`}
-          onClick={props.onDelete}
+          
         >
           {props.text}
         </p>
-        <span className="closeSpan">X</span>
+        <span className="closeSpan"onClick={props.onDelete}>X</span>
       </li>
     </div>
   );
