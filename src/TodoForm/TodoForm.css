@@ -1,0 +1,70 @@
+.bigEnvoltura {
+    width: 50%;
+    height: auto;
+    background-image: url(https://images.pexels.com/photos/2008145/pexels-photo-2008145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #ccc;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .textArea {
+    width: 90%;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 50px 0;
+    resize: none
+  }
+  
+  label {
+    color: #514343;
+    margin-bottom: 20px;
+  }
+  
+  .envoltura {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancelar {
+    width: 45%;
+    background-color: #ff5252;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancelar:hover {
+    background-color: #ff0000;
+  }
+  
+  .añadir {
+    width: 45%;
+    background-color: #00c853;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .añadir:hover {
+    background-color: #00a000;
+  }
+  

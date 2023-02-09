@@ -25,7 +25,14 @@ function TodoProvider(props) {
       return todoText.includes(searchText);
     });
   }
-
+  const addTodo = (text) => {
+    const newTodo = [...todos];
+    newTodo.push({
+      completed:false,
+      text,
+    })
+    saveTodos(newTodo);
+  };
   const onComplete = (text) => {
     const toDoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodo = [...todos];
@@ -47,10 +54,12 @@ function TodoProvider(props) {
         searchValue,
         setsearchValue,
         searchedTodos,
+        addTodo,
         onComplete,
         onDelete,
         openModal,
-        setOpenModal
+        setOpenModal,
+        
     }}>{props.children}</TodoContext.Provider>
   );
 }
