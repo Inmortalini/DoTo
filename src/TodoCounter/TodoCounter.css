@@ -2,7 +2,7 @@
     background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #f00, #00f);
+  background-image: linear-gradient(to right, rgb(251, 255, 0), rgb(174, 255, 0));
   width: 50%;
   margin: 40px auto;
   text-align: center;

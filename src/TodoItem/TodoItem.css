@@ -9,6 +9,7 @@
   background-color: white;
   margin: auto;
   text-align: center;
+  max-width: 80%;
 }
 .liItem:hover{
     background-color: #D9E135;
@@ -32,7 +33,7 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  font-size: 16px;
+  font-size: 36px;
   font-weight: bold; 
   color: #3f3e3e;
   margin-right: 10px;
@@ -45,7 +46,7 @@
   width: 30px;
   height: 30px;
   text-align: center;
-  font-size: 16px;
+  font-size: 36px;
   font-weight: bold;
   
   color: #353930;
@@ -62,7 +63,7 @@
 .pItem {
   flex-grow: 1;
   margin: 0;
-  background-color: white;
+  
 }
 .pTachada{
     text-decoration: line-through;
@@ -70,4 +71,22 @@
 .Icon-check--active{
     color: #4caf50;
 }
-
+.closeSpan, .openSpan {
+  font-size: 24px;
+}
+.liItem {
+  height: 10vh; 
+}
+.closeSpan, .openSpan {
+  width: 5vh;
+  height: 5vh;
+}
+.liItem:hover{
+  background-color: #D9E135;
+}
+.liItem:hover .pItem{
+  background-color: #D9E135;
+}
+.openSpan:hover {
+  background-color: #b3b590;
+}

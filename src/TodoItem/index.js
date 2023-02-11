@@ -1,5 +1,6 @@
 import React from "react";
 import "./TodoItem.css";
+import { TiInputChecked,TiTrash } from "react-icons/ti";
 
 function TodoItem(props) {
  
@@ -10,7 +11,7 @@ function TodoItem(props) {
           className={`openSpan ${props.completed ? "Icon-check--active" : ""}`}
           onClick={props.onComplete}
         >
-          ✔
+          <TiInputChecked/>
         </span>
         <p
           className={`pItem ${props.completed ? "pTachada" : ""}`}
@@ -18,7 +19,9 @@ function TodoItem(props) {
         >
           {props.text}
         </p>
-        <span className="closeSpan"onClick={props.onDelete}>X</span>
+        <span className="closeSpan"onClick={props.onDelete}>
+          <TiTrash/>
+        </span>
       </li>
     </div>
   );
