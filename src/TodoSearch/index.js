@@ -1,9 +1,7 @@
 import React from "react";
-import { TodoContext } from "../Todocontext";
 import "./TodoSearch.css";
 
-function TodoSearch() {
-  const { searchValue, setsearchValue }=React.useContext(TodoContext)
+function TodoSearch({ searchValue, setsearchValue }) {
   const onSearch = (event) => {
     console.log(event.target.value);
     setsearchValue(event.target.value);
@@ -17,7 +15,6 @@ function TodoSearch() {
         value={searchValue}
         onChange={onSearch}
       />
-      
     </React.Fragment>
   );
 }

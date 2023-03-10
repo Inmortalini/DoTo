@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocalStorge } from "./useLocalStorage";
-const TodoContext = React.createContext();
-function TodoProvider(props) {
+
+function useTodos() {
   const {
     item: todos,
     saveItem: saveTodos,
@@ -10,8 +10,8 @@ function TodoProvider(props) {
   } = useLocalStorge("TODOS_V1", []);
 
   const [searchValue, setsearchValue] = React.useState("");
-  const [openModal,setOpenModal]=React.useState(false);
-  const [todoDelete, setTodoDelete]=React.useState(null);
+  const [openModal, setOpenModal] = React.useState(false);
+  const [todoDelete, setTodoDelete] = React.useState(null);
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
 
@@ -29,9 +29,9 @@ function TodoProvider(props) {
   const addTodo = (text) => {
     const newTodo = [...todos];
     newTodo.push({
-      completed:false,
+      completed: false,
       text,
-    })
+    });
     saveTodos(newTodo);
   };
   const onComplete = (text) => {
@@ -42,44 +42,40 @@ function TodoProvider(props) {
   };
   const onDelete = (text) => {
     const toDoIndex = todos.findIndex((todo) => todo.text === text);
-    const deletedTodo=todos[toDoIndex];
+    const deletedTodo = todos[toDoIndex];
     const newTodo = [...todos];
     setTodoDelete(newTodo[toDoIndex]);
     newTodo.splice(toDoIndex, 1);
-    console.log('Elemento borrado', deletedTodo);
+    console.log("Elemento borrado", deletedTodo);
     saveTodos(newTodo);
   };
-  const confirmDelete=()=>{
-    if(todoDelete){
-      const newTodo=[...todos];
-      const toDoIndex=newTodo.findIndex((todo)=>
-      todo.text===todoDelete.text);
-      newTodo.splice(toDoIndex,1);
+  const confirmDelete = () => {
+    if (todoDelete) {
+      const newTodo = [...todos];
+      const toDoIndex = newTodo.findIndex(
+        (todo) => todo.text === todoDelete.text
+      );
+      newTodo.splice(toDoIndex, 1);
       saveTodos(newTodo);
       setTodoDelete(null);
     }
-  }
-  return (
-    <TodoContext.Provider value={{
-        error,
-        loading,
-        totalTodos,
-        completedTodos,
-        searchValue,
-        setsearchValue,
-        searchedTodos,
-        addTodo,
-        onComplete,
-        onDelete,
-        openModal,
-        setOpenModal,
-        todoDelete,
-        setTodoDelete,
-        confirmDelete,
-        
-    }}>{props.children}</TodoContext.Provider>
-  );
+  };
+  return {
+    error,
+    loading,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setsearchValue,
+    searchedTodos,
+    addTodo,
+    onComplete,
+    onDelete,
+    openModal,
+    setOpenModal,
+    todoDelete,
+    setTodoDelete,
+    confirmDelete,
+  };
 }
-
-<TodoContext.Consumer></TodoContext.Consumer>;
-export{TodoContext, TodoProvider}
+export {useTodos };
