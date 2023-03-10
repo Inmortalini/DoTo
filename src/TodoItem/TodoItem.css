@@ -90,3 +90,10 @@
 .openSpan:hover {
   background-color: #b3b590;
 }
+/* Media Querys */
+@media(max-width: 600px){
+  .liItem {
+    height: 100%;
+    width: 80%;
+  }
+}

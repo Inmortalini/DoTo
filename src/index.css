@@ -5,13 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://images.pexels.com/photos/7794411/pexels-photo-7794411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  background-color: rgba(255, 255, 255, 0.797);
-  background-size: auto;
-  background-position: center;
-  /* Agrega esta línea */
+  background-color: rgba(255, 255, 255, 0.858);
+  /* background-image: url(https://images.pexels.com/photos/4068029/pexels-photo-4068029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
 }
-
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    
+    background-image: url(https://images.pexels.com/photos/4465146/pexels-photo-4465146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: bottom;
+    background-size: 350px;
+    background-repeat:repeat;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -12,3 +12,22 @@
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px lightgrey;
 }
+@media (max-width: 768px) {
+  .TodoCounter{
+    
+     background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+   background-image: linear-gradient(to right, rgb(68, 69, 18), rgb(104, 151, 3));
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px lightgrey;
+   
+  }
+}
+;
