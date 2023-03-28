@@ -12,8 +12,6 @@ import { TodoHeader } from "../TodoHeader";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 
-
-
 function App() {
   const {
     error,
