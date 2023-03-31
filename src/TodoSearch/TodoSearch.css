@@ -24,5 +24,7 @@
   font-size: 1.1rem; /* Tamaño grande */
   font-weight: bold;
 }
-
+.TodoSearch:disabled{
+  opacity: 25%;
+}
 

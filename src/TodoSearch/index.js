@@ -1,7 +1,7 @@
 import React from "react";
 import "./TodoSearch.css";
 
-function TodoSearch({ searchValue, setsearchValue }) {
+function TodoSearch({ searchValue, setsearchValue,loading }) {
   const onSearch = (event) => {
     console.log(event.target.value);
     setsearchValue(event.target.value);
@@ -14,6 +14,7 @@ function TodoSearch({ searchValue, setsearchValue }) {
         className="TodoSearch"
         value={searchValue}
         onChange={onSearch}
+        disabled={loading}
       />
     </React.Fragment>
   );

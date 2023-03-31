@@ -17,11 +17,10 @@ body {
 }
 @media (max-width: 768px) {
   body {
-    
     background-image: url(https://images.pexels.com/photos/4465146/pexels-photo-4465146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-position: bottom;
     background-size: 350px;
-    background-repeat:repeat;
+    background-repeat: repeat;
   }
 }
 code {
@@ -34,3 +33,10 @@ code {
   font-weight: bold; /* Negrita */
 }
 
+.not-found {
+  color: rgb(255, 174, 0);
+}
+.not-found strong {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

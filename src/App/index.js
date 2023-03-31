@@ -29,17 +29,19 @@ function App() {
   } = useTodos();
   return (
     <React.Fragment>
-      <TodoHeader>
-        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
+      <TodoHeader loading={loading}>
+        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} 
+        />
 
-        <TodoSearch searchValue={searchValue} setsearchValue={setsearchValue} />
+        <TodoSearch searchValue={searchValue} setsearchValue={setsearchValue}
+         />
       </TodoHeader>
 
       <TodoList>
         {loading && <TodosLoading />}
         {error && <TodosError />}
         {!loading && !searchedTodos.length && searchValue.length > 0 && (
-          <p>Este elemento no existe {searchValue}</p>
+          <p className="not-found">El elemento: <strong>{searchValue}</strong> no lo has agregado todavia.</p>
         )}
         {!loading &&
           searchedTodos.map((todo) => (
